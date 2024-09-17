@@ -1,101 +1,190 @@
-import Image from "next/image";
+"use client"
+import { useState, useRef } from 'react'
+import Wsp from '@/components/Wsp';
+import statue from '@/public/assets/statue.jpg';
+import TeamCarousel from '@/components/snippets/TeamCarousel';
+import { motion, useInView } from 'framer-motion'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { GavelIcon, CalculatorIcon  } from "lucide-react"
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [activeTab, setActiveTab] = useState('juridicos')
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const serviciosRef = useRef(null)
+  const equipoRef = useRef(null)
+  const nosotrosRef = useRef(null)
+
+  const isServiciosInView = useInView(serviciosRef, { once: true })
+  const isEquipoInView = useInView(equipoRef, { once: true })
+  const isNosotrosInView = useInView(nosotrosRef, { once: true })
+
+  const serviciosJuridicos = [
+    "Derecho Previsional",
+    "Derecho Laboral",
+    "Divorcios",
+    "Daños y Perjuicios",
+    "Prescripción Adquisitiva de Inmuebles",
+    "Contratos",
+    "Amparos",
+    "Alimentos"
+  ]
+
+  const serviciosContables = [
+    "Derecho Previsional",
+    "Derecho Laboral",
+    "Divorcios",
+    "Daños y Perjuicios",
+    "Contratos",
+    "Derechos del Consumidor",
+    "Amparos",
+    "Prescripción Adquisitiva de Inmuebles",
+    "Alimentos",
+    "Filiación",
+    "Sucesiones"
+  ]
+
+  const textAnimation = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }
+
+  return (
+    <main> {/* Removed 'relative' as it's not necessary for box shadow */}
+      <div className="md:flex  md:flex-row-reverse">
+        <div className="w-full md:w-3/5 shadow-md"> {/* Added shadow-md here */}
+
+        <section className="block h-[340px] bg-cover bg-center shadow-lg w-full" style={{ backgroundImage: `url(${statue.src})` }}></section>{/*div 1*/}
+
+        <section id="servicios" className="py-8 shadow-sm" ref={serviciosRef}>
+          <motion.h2 
+            variants={textAnimation}
+            initial="hidden"
+            animate={isServiciosInView ? "visible" : "hidden"}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-bold mb-8 text-center"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Nuestros Servicios
+          </motion.h2>
+          <Tabs defaultValue="juridicos" className="w-full" onValueChange={setActiveTab}>
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="juridicos">Servicios Jurídicos</TabsTrigger>
+              <TabsTrigger value="contables">Servicios Contables</TabsTrigger>
+            </TabsList>
+            <TabsContent value="juridicos">
+              <Card>
+                <CardHeader>
+                  <CardTitle className='text-lg'>Servicios Jurídicos</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <motion.ul 
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                      visible: { transition: { staggerChildren: 0.1 } },
+                    }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                  >
+                    {serviciosJuridicos.map((servicio, index) => (
+                      <motion.li 
+                        key={index}
+                        variants={{
+                          hidden: { opacity: 0, y: 20 },
+                          visible: { opacity: 1, y: 0 },
+                        }}
+                        className="flex items-center space-x-2"
+                      >
+                        <GavelIcon className="h-5 w-5 text-primary" />
+                        <p className='text-sm'>{servicio}</p>
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            <TabsContent value="contables">
+              <Card>
+                <CardHeader>
+                  <CardTitle className='text-lg'>Servicios Contables</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <motion.ul 
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                      visible: { transition: { staggerChildren: 0.1 } },
+                    }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                  >
+                    {serviciosContables.map((servicio, index) => (
+                      <motion.li 
+                        key={index}
+                        variants={{
+                          hidden: { opacity: 0, y: 20 },
+                          visible: { opacity: 1, y: 0 },
+                        }}
+                        className="flex items-center space-x-2"
+                      >
+                        <CalculatorIcon className="h-5 w-5 text-primary" />
+                        <p className='text-sm'>{servicio}</p>
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
+        </section>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        
+        
+        <div className="w-full md:w-2/5 block  md:self-start"> {/*div 2*/}
+          <div className="shadow-xl bg-black py-5 border-b border-gray-300" ref={equipoRef}>
+            <motion.h2 
+              variants={textAnimation}
+              initial="hidden"
+              animate={isEquipoInView ? "visible" : "hidden"}
+              transition={{ duration: 0.5 }}
+              className="text-lg font-bold text-center text-light py-3"
+            >
+              Nuestro equipo
+            </motion.h2>
+            <TeamCarousel />
+          </div>
+
+          {/*Do go alone seccion */}
+          <section id="nosotros" className="lg:h-[200px] h-[280px] bg-black" ref={nosotrosRef}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isNosotrosInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+            className="bg-black rounded-lg px-8 py-6 text-center"
+          >
+            <motion.h2 
+              variants={textAnimation}
+              initial="hidden"
+              animate={isNosotrosInView ? "visible" : "hidden"}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-base font-bold mb-4 text-primary"
+            >
+              NO ENFRENTE LOS TIEMPOS DIFÍCILES SOLO
+            </motion.h2>
+            <motion.p 
+              variants={textAnimation}
+              initial="hidden"
+              animate={isNosotrosInView ? "visible" : "hidden"}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-sm italic text-primary my-auto py-auto lg:pt-2"
+            >
+              &ldquo;Somos aliados estratégicos de nuestros clientes en tiempos de toma de decisiones, para realizar gestiones administrativas y/o entablar acciones judiciales, así como para acompañar en épocas de cambios importantes.&rdquo;
+            </motion.p>
+            
+          </motion.div>
+        </section>
+        </div>
+      </div>
+      
+      <Wsp/>
+    </main>
   );
 }
