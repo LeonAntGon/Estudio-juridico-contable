@@ -23,7 +23,7 @@ export default function TeamCarousel() {
   };
 
   return (
-    <div className=" z-5 w-full max-w-md min-m-[5px] mx-auto">
+    <div className=" z-5 w-full max-w-md min-m-[5px] mx-auto ]">
       <div className="max-h-[460px] w-full ">
         <AnimatePresence mode="wait">
           <motion.div
@@ -41,14 +41,22 @@ export default function TeamCarousel() {
             />
           </motion.div>
         </AnimatePresence>
-        
-        <button onClick={prevSlide} className=" md:top-[340px] block absolute  transform -translate-y-1/2 bg-opacity-50 hover:bg-opacity-75 rounded-full p-1 transition-all">
+        {/*Carrousel con botones */}
+    <div className='flex justify-between mt-[-200px] mb-[200px]'>
+      <div>
+
+        <button onClick={prevSlide} className=" block absolute  transform -translate-y-1/2 bg-opacity-50 hover:bg-opacity-75 rounded-full p-1 transition-all">
         <svg width="24px" height="24px" stroke-width="1.4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 12H8M8 12L11.5 15.5M8 12L11.5 8.5" stroke="#F3F4F6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#F3F4F6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         
       </button>
-      <button onClick={nextSlide} className=" md:top-[340px] right-[45px] md:right-0 md:left-[458px] block absolute  transform -translate-y-1/2 bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all">
+      </div>
+
+      <div>
+      <button onClick={nextSlide} className="  transform -translate-y-1/2 bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition-all">
       <svg width="24px" height="24px" stroke-width="1.4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M8 12H16M16 12L12.5 8.5M16 12L12.5 15.5" stroke="#F3F4F6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#F3F4F6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </button>
+      </div>
+  </div>
         
         
       </div>

@@ -57,7 +57,9 @@ export default function Header() {
     <nav className="bg-dark w-full flex justify-between z-60 fixed top-0 max-h-[80px]">
           <div>
             <div className="ml-6 my-1">
-              <Image src={logo.src} alt="logo" width={130} height={10} />
+              <Link href={"./"}>
+                <Image src={logo.src} alt="logo" width={130} height={10} />
+              </Link>
             </div>
           </div>
   
