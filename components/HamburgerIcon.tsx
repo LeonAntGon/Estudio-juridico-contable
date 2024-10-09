@@ -8,7 +8,7 @@ const HamburgerMenu: React.FC = () => {
     transition: "0.5s",
     strokeWidth: "6px",
     stroke: "black",
-    strokeLinecap: "round",
+    strokeLinecap: "round" as "butt" | "round" | "square", // Asegúrate de que sea uno de los tipos permitidos
   };
 
   return (
