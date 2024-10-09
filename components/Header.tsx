@@ -42,11 +42,11 @@ export default function Header() {
   
     const menuItems = ["Inicio", "Nosotros", "Blog", "Contacto"];
 
-    const commonLineStyles = {
+    const commonLineStyles: React.CSSProperties = {
         transition: "0.5s",
         strokeWidth: "4px",
         stroke: "#F3F4F6",
-        strokeLinecap: "round",
+        strokeLinecap: "round" as React.CSSProperties["strokeLinecap"], // Asegúrate de que sea del tipo correcto
       };
 
       
