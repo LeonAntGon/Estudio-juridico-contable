@@ -175,7 +175,7 @@ export default function Home() {
           >
             Nuestros Servicios
           </motion.h2>
-          <Tabs defaultValue="juridicos" className="w-full" onValueChange={setActiveTab}>
+          <Tabs defaultValue={activeTab} className="w-full" onValueChange={setActiveTab}>
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="juridicos">Servicios Jurídicos</TabsTrigger>
               <TabsTrigger value="contables">Servicios Contables</TabsTrigger>

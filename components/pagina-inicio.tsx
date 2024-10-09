@@ -7,9 +7,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {  PhoneIcon, MailIcon, MapPinIcon } from "lucide-react";
 import { FaTiktok, FaFacebookF, FaInstagram } from 'react-icons/fa';
+import Image from 'next/image'
 
 export function PaginaInicioComponent() {
-  const [activeTab, setActiveTab] = useState("'juridicos'")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -21,30 +21,8 @@ export function PaginaInicioComponent() {
     console.log("Form submitted")
   }
 
-  const serviciosJuridicos = [
-    "Derecho Previsional",
-    "Derecho Laboral",
-    "Divorcios",
-    "Daños y Perjuicios",
-    "Prescripción Adquisitiva de Inmuebles",
-    "Contratos",
-    "Amparos",
-    "Alimentos"
-  ]
 
-  const serviciosContables = [
-    "Derecho Previsional",
-    "Derecho Laboral",
-    "Divorcios",
-    "Daños y Perjuicios",
-    "Contratos",
-    "Derechos del Consumidor",
-    "Amparos",
-    "Prescripción Adquisitiva de Inmuebles",
-    "Alimentos",
-    "Filiación",
-    "Sucesiones"
-  ]
+
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/10 to-background">
@@ -58,7 +36,7 @@ export function PaginaInicioComponent() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <img src="/logo.png" alt="Logo del Estudio Jurídico Contable" className="mx-auto h-24 mb-6" />
+            <Image src="/logo.png" alt="Logo del Estudio Jurídico Contable" className="mx-auto h-24 mb-6" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4 dark:text-gray-50">Contáctenos</h2>
             <p className="text-xl text-gray-600">Estamos aquí para ayudarle con sus necesidades legales y contables</p>
           </motion.div>
