@@ -1,18 +1,18 @@
 "use client"
 
-import { useState } from "'react'"
+import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PhoneIcon, MailIcon, MapPinIcon, SendIcon } from "lucide-react"
 import { motion } from "framer-motion"
-import { FaTiktok, FaFacebookF, FaInstagram } from "'react-icons/fa'"
+import { FaTiktok, FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 export function ContactoComponent() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setIsSubmitting(true)
     // Simulate form submission
@@ -190,7 +190,7 @@ export function ContactoComponent() {
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
-                  allowFullScreen="" 
+                  
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Ubicación de la Oficina"
