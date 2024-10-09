@@ -1,14 +1,12 @@
 "'use client'"
-
-import { useState } from "'react'"
-import { motion } from "'framer-motion'"
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { GavelIcon, CalculatorIcon, UserIcon, PhoneIcon, MailIcon, MapPinIcon, ShieldIcon } from "lucide-react"
-import { FaTiktok, FaFacebookF, FaInstagram } from "'react-icons/fa'"
+import {  PhoneIcon, MailIcon, MapPinIcon } from "lucide-react";
+import { FaTiktok, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 export function PaginaInicioComponent() {
   const [activeTab, setActiveTab] = useState("'juridicos'")
