@@ -53,7 +53,7 @@ export default function Header() {
     return (
         
 <>
-<header className="w-full z-60">
+<header className="w-full z-60 z-10">
     <nav className="bg-dark w-full flex justify-between z-60 fixed top-0 max-h-[80px]">
           <div>
             <div className="ml-6 my-1">
