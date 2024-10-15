@@ -333,6 +333,12 @@ export default function Home() {
                   <span>Av. Salta 78,2º A - S. M. de Tucumán</span>
                 </div>
                 <div className="pt-4">
+                  <h3 className="font-semibold mb-2">Nuestro horario de atención</h3>
+                  <div className="flex space-x-4">
+                    <p>Lunes a viernes de 8:00 a.m. a 5:00 p.m.</p>
+                  </div>
+                </div>
+                <div className="pt-4">
                   <h3 className="font-semibold mb-2">Síguenos en redes sociales</h3>
                   <div className="flex space-x-4">
                     <motion.a

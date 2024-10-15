@@ -53,8 +53,9 @@ export default function Header() {
     return (
         
 <>
-<header className="w-full z-60 z-10">
-    <nav className="bg-dark w-full flex justify-between z-60 fixed top-0 max-h-[80px]">
+<header className="w-full ">
+    <nav style={{ zIndex: 100 }} 
+    className="bg-dark w-full flex justify-between  fixed top-0 max-h-[80px]">
           <div>
             <div className="ml-6 my-1">
               <Link href={"./"}>
