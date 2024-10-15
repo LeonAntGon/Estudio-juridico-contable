@@ -139,13 +139,18 @@ export default function Contacto() {
         >
           <Card>
             <CardHeader className="flex-row">
-              <CardTitle className="text-2xl">Nuestra Ubicación</CardTitle>
+              <CardTitle className="text-2xl">Ubicación</CardTitle>
               <svg className="ml-2" width="24px" height="24px" stroke-width="1.4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M9 19L3.78974 20.7368C3.40122 20.8663 3 20.5771 3 20.1675L3 5.43246C3 5.1742 3.16526 4.94491 3.41026 4.86325L9 3M9 19L15 21M9 19L9 3M15 21L20.5897 19.1368C20.8347 19.0551 21 18.8258 21 18.5675L21 3.83246C21 3.42292 20.5988 3.13374 20.2103 3.26325L15 5M15 21L15 5M15 5L9 3" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </CardHeader>
             <CardContent>
               <div className="aspect-video w-full rounded-lg overflow-hidden">
+                <div className='flex my-2'>
+                <svg width="20px" height="20px" stroke-width="1.4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M20 10C20 14.4183 12 22 12 22C12 22 4 14.4183 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10Z" stroke="#000000" stroke-width="1.4"></path><path d="M12 11C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10C11 10.5523 11.4477 11 12 11Z" fill="#000000" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <p className='font-semibold'>Av. Salta 78,2º A - S. M. de Tucumán</p>
+                </div>
+              
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.538775768904!2d-65.21186805991198!3d-26.828791268369212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d005a79bcfd%3A0xe66584a73c8fa173!2sVIEYRA%20%26%20FARIAS%20VIEYRA%20Estudio%20Jur%C3%ADdico%20Contable!5e0!3m2!1sen!2sar!4v1726376030819!5m2!1sen!2sar" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.538775768904!2d-65.21186805991198!3d-26.828791268369212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d005a79bcfd%3A0xe66584a73c8fa173!2sVIEYRA%20%26%20FARIAS%20VIEYRA%20Estudio%20Jur%C3%ADdico%20Contable!5e0!3m2!1sen!2sar!4v1726376030819!5m2!1sen!2sar&hl=es" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
@@ -153,6 +158,7 @@ export default function Contacto() {
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Ubicación de la Oficina"
+                  className='h-[1000px] md:h-auto'
                 ></iframe>
               </div>
             </CardContent>

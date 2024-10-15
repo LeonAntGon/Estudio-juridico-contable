@@ -164,9 +164,9 @@ export function ContactoComponent() {
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold">Contacto directo</h3>
                   <div className="space-y-2">
-                    <p><strong>Abogada:</strong> +54 381 123 4567</p>
-                    <p><strong>Contador:</strong> +54 381 987 6543</p>
-                    <p><strong>Email:</strong> info@estudiojuridicocontable.com</p>
+                    <p><strong>Abogada:</strong> +54 381 589 9912</p>
+                    <p><strong>Contador:</strong> +54 381 589 9912</p>
+                    <p><strong>Email:</strong>cvestudiojuridicotuc@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -181,10 +181,12 @@ export function ContactoComponent() {
         >
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl">Nuestra Ubicación</CardTitle>
+              <CardTitle className="text-2xl">Ubicación</CardTitle>
             </CardHeader>
             <CardContent>
+            
               <div className="aspect-video w-full rounded-lg overflow-hidden">
+              
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.538775768904!2d-65.21186805991198!3d-26.828791268369212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d005a79bcfd%3A0xe66584a73c8fa173!2sVIEYRA%20%26%20FARIAS%20VIEYRA%20Estudio%20Jur%C3%ADdico%20Contable!5e0!3m2!1sen!2sar!4v1726376030819!5m2!1sen!2sar" 
                   width="100%" 
@@ -195,6 +197,7 @@ export function ContactoComponent() {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Ubicación de la Oficina"
                 ></iframe>
+                <p>Av. Salta 78,2º A - S. M. de Tucumán</p>
               </div>
             </CardContent>
           </Card>

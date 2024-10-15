@@ -322,15 +322,15 @@ export default function Home() {
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <PhoneIcon className="text-primary h-5 w-5" />
-                  <span>+54 381 123 4567</span>
+                  <span>+54 381 589 9912 </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MailIcon className="text-primary h-5 w-5" />
-                  <span>info@estudiojuridicocontable.com</span>
+                  <span>cvestudiojuridicotuc@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPinIcon className="text-primary h-5 w-5" />
-                  <span>San Martín 123, San Miguel de Tucumán, Tucumán, Argentina</span>
+                  <span>Av. Salta 78,2º A - S. M. de Tucumán</span>
                 </div>
                 <div className="pt-4">
                   <h3 className="font-semibold mb-2">Síguenos en redes sociales</h3>
