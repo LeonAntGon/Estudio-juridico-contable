@@ -150,9 +150,9 @@ export default function Contacto() {
                 </div>
               
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.538775768904!2d-65.21186805991198!3d-26.828791268369212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d005a79bcfd%3A0xe66584a73c8fa173!2sVIEYRA%20%26%20FARIAS%20VIEYRA%20Estudio%20Jur%C3%ADdico%20Contable!5e0!3m2!1sen!2sar!4v1726376030819!5m2!1sen!2sar&hl=es" 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7120.686925406996!2d-65.210876!3d-26.829026!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d005a79bcfd%3A0xe66584a73c8fa173!2sVIEYRA%20%26%20FARIAS%20VIEYRA%20Estudio%20Jur%C3%ADdico%20Contable!5e0!3m2!1ses-419!2sar!4v1729039414889!5m2!1ses-419!2sar"
                   width="100%" 
-                  
+                  height="100%"
                   style={{ border: 0 }} 
                   allowFullScreen="" 
                   loading="lazy" 
