@@ -112,7 +112,7 @@ export default function Home() {
         <div className="w-full md:w-3/5 shadow-md"> {/* Added shadow-md here */}
 
         <section className="block h-[340px] bg-cover bg-center shadow-lg w-full" style={{ backgroundImage: `url(${statue.src})` }}>
-           <div className='pt-[100px] max-w-[350px] font-bold text-xl text-light pl-[20px]'>
+           <div className='pt-[40px] max-w-[350px] font-bold text-xl text-light pl-[20px]'>
           
           <h1 
               className='mb-[50px] font-semibold text-lg '
