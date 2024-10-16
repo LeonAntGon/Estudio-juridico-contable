@@ -15,6 +15,7 @@ import { FaTiktok, FaFacebookF, FaInstagram } from 'react-icons/fa'
 import Image from 'next/image'
 import Logo from '@/public/assets/logo-transparent.png'
 import Link from 'next/link';
+import WhatsappLive from '@/components/snippets/WhatsappLive';
 
 
 const buttonStyles = {
@@ -293,7 +294,7 @@ export default function Home() {
         </div>
       </div>
       
-      <Wsp/>
+      <WhatsappLive/>
     </main>
     <footer>
     <div className="container mx-auto px-4 pt-5">
@@ -304,8 +305,7 @@ export default function Home() {
           className="text-center mb-12"
         >
           <Image src={Logo.src} alt='Vieyra & FarÍas Vieyra Estudio Jurídico Contable' height={120} width={170}/>
-          <h2 className="text-3xl font-bold text-dark mb-4">Contáctenos</h2>
-          <p className="text-xl text-gray-600">Estamos aquí para ayudarle con sus necesidades legales y contables</p>
+          <h2 className="text-3xl font-bold text-dark my-3">Contáctenos</h2>
         </motion.div>
       </div>
 
