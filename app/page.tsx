@@ -335,8 +335,13 @@ export default function Home() {
                   <span>Av. Salta 78,2º A - S. M. de Tucumán</span>
                 </div>
                 <div className="pt-12">
-                  <h3 className="font-semibold mb-2">Nuestro horario de atención</h3>
-                  <div className="flex space-x-4">
+                  <div className='flex '>
+                    <svg width="22px" height="22px" stroke-width="1.4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M12 6L12 12L18 12" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <h3 className="font-semibold ml-2">
+                    Nuestro horario de atención</h3>
+                  </div>
+                  
+                  <div className="flex space-x-4 mt-2">
                     <p>Lunes a viernes de 8:00 a.m. a 5:00 p.m.</p>
                   </div>
                 </div>

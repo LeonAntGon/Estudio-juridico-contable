@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="">
-  <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+  <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-[74px] sm:px-6 lg:space-y-16 lg:px-8">
     <div className="flex items-center flex-col md:flex-row lg:justify-around mb-[60px]">
       <div className="text-teal-600">
       <Image src={Logo.src} alt='Vieyra & FarÍas Vieyra Estudio Jurídico Contable' height={100} width={150}/>
