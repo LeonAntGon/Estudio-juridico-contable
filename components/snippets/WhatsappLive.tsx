@@ -14,7 +14,7 @@ const WhatsappLive = () => {
     useEffect(() =>{
         const handleScroll = () =>{
             const whatsappLinkElement = document.querySelector(".whatsapp-link");
-            if(window.scrollY > 100) {
+            if(window.scrollY > 80) {
                 whatsappLinkElement?.classList.add("visible");
             } else {
                 whatsappLinkElement?.classList.remove("visible")
@@ -51,14 +51,14 @@ const WhatsappLive = () => {
         href={whatsappLink}
         target='_blank'
         rel='nonereferrer noopener'>
-            <span className='absolute left-[4px] top-[5px] -z-50 size-10'>
+            <span className='absolute left-[7px] top-[8px] -z-50 size-10'>
                 <span className='flex size-full items-center justify-center animate-ping rounded-full bg-green-500 opacity-75'></span>
             </span>
             <Image 
             src={WspLogo} 
             alt='whatsapp' 
-            width={50} 
-            height={50}
+            width={55} 
+            height={55}
             className='z-60'
             />
         </a>

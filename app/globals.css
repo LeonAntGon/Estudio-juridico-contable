@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 *, *::after, *::before {
   margin: 0;
   box-sizing: border-box;
@@ -11,8 +9,9 @@
 
 }
 
-
-
+html {
+  scroll-behavior: smooth;
+}
 
 .whatsapp-link{
   position: fixed;
@@ -51,3 +50,6 @@
   
 }
 
+html {
+  scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}
