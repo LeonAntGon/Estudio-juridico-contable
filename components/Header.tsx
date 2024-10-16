@@ -152,6 +152,7 @@ export default function Header() {
               <Link
                 className="w-full hover:text-blue-500 text-gray-200 font-semibold"
                 href={generateHref(item)}
+                onClick={() => setOpenNav(!openNav)}
               >
                 {item}
               </Link>

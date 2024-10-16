@@ -177,8 +177,8 @@ export default function Home() {
           </motion.h2>
           <Tabs defaultValue={activeTab} className="w-full" onValueChange={setActiveTab}>
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="juridicos">Servicios Jurídicos</TabsTrigger>
-              <TabsTrigger value="contables">Servicios Contables</TabsTrigger>
+              <TabsTrigger value="juridicos" style={{ fontWeight: 600 }} >Servicios Jurídicos</TabsTrigger>
+              <TabsTrigger value="contables" style={{ fontWeight: 600 }}>Servicios Contables</TabsTrigger>
             </TabsList>
             <TabsContent value="juridicos">
               <Card>

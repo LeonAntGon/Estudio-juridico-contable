@@ -14,7 +14,7 @@ const WhatsappLive = () => {
     useEffect(() =>{
         const handleScroll = () =>{
             const whatsappLinkElement = document.querySelector(".whatsapp-link");
-            if(window.scrollY > 80) {
+            if(window.scrollY > 75) {
                 whatsappLinkElement?.classList.add("visible");
             } else {
                 whatsappLinkElement?.classList.remove("visible")
