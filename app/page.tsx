@@ -10,9 +10,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { PhoneIcon, MailIcon, MapPinIcon } from "lucide-react"
-import { FaTiktok, FaFacebookF, FaInstagram } from 'react-icons/fa'
-import Image from 'next/image'
-import Logo from '@/public/assets/logo-transparent.png'
 import Link from 'next/link';
 import WhatsappLive from '@/components/snippets/WhatsappLive';
 
@@ -116,7 +113,23 @@ export default function Home() {
 
         <section className="block h-[340px] bg-cover bg-center shadow-lg w-full" style={{ backgroundImage: `url(${statue.src})` }}>
            <div className='pt-[100px] max-w-[350px] font-bold text-xl text-light pl-[20px]'>
-          <h1 className='mb-[50px]'>Estamos a su disposición para asistirle con sus asuntos legales y contables.</h1>
+          
+          <motion.h1 
+              variants={textAnimation}
+              initial="hidden"
+              animate={isEquipoInView ? "visible" : "hidden"}
+              transition={{ duration: 0.5 }}
+              className='mb-[50px] font-semibold text-lg '
+            >
+              Estamos a su disposición para asistirle con sus asuntos legales y contables.
+            </motion.h1>
+            <motion.div
+              variants={textAnimation}
+              initial="hidden"
+              animate={isEquipoInView ? "visible" : "hidden"}
+              transition={{ duration: 1 }}
+              
+            >
           <Link href="/contacto">
           <button
       style={{
@@ -155,7 +168,7 @@ export default function Home() {
       </svg>
     </button>
     </Link>
-  
+    </motion.div>
     </div>
     
     </section>{/*div 1*/}
@@ -303,7 +316,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <Image src={Logo.src} alt='Vieyra & FarÍas Vieyra Estudio Jurídico Contable' height={120} width={170}/>
+         
           <h2 className="text-3xl font-bold text-dark my-3">Contáctenos</h2>
         </motion.div>
       </div>
@@ -314,11 +327,11 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Card>
+            <Card className='md:h-[420px]'>
               <CardHeader>
                 <CardTitle>Información de Contacto</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 ">
                 <div className="flex items-center space-x-3">
                   <PhoneIcon className="text-primary h-5 w-5" />
                   <span>+54 381 589 9912 </span>
@@ -331,47 +344,13 @@ export default function Home() {
                   <MapPinIcon className="text-primary h-5 w-5" />
                   <span>Av. Salta 78,2º A - S. M. de Tucumán</span>
                 </div>
-                <div className="pt-4">
+                <div className="pt-12">
                   <h3 className="font-semibold mb-2">Nuestro horario de atención</h3>
                   <div className="flex space-x-4">
                     <p>Lunes a viernes de 8:00 a.m. a 5:00 p.m.</p>
                   </div>
                 </div>
-                <div className="pt-4">
-                  <h3 className="font-semibold mb-2">Síguenos en redes sociales</h3>
-                  <div className="flex space-x-4">
-                    <motion.a
-                      href="https://www.tiktok.com/@abogadaclaudiavieyra"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="bg-primary text-primary-foreground p-2 rounded-full"
-                    >
-                      <FaTiktok size={20} />
-                    </motion.a>
-                    <motion.a
-                      href="https://www.facebook.com/profile.php?id=61565158322290&mibextid=ZbWKwL"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="bg-primary text-primary-foreground p-2 rounded-full"
-                    >
-                      <FaFacebookF size={20} />
-                    </motion.a>
-                    <motion.a
-                      href="https://www.instagram.com/draclaudiavieyra/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="bg-primary text-primary-foreground p-2 rounded-full"
-                    >
-                      <FaInstagram size={20} />
-                    </motion.a>
-                  </div>
-                </div>
+                
               </CardContent>
             </Card>
           </motion.div>
