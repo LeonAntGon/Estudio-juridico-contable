@@ -37,7 +37,7 @@ export default function TeamCarousel() {
               src={teamMembers[currentIndex].image}
               alt={teamMembers[currentIndex].name}
               
-              className="rounded-sm h-[400px] object-cover"
+              className="h-[400px] object-cover"
             />
           </motion.div>
         </AnimatePresence>

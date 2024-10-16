@@ -114,22 +114,12 @@ export default function Home() {
         <section className="block h-[340px] bg-cover bg-center shadow-lg w-full" style={{ backgroundImage: `url(${statue.src})` }}>
            <div className='pt-[100px] max-w-[350px] font-bold text-xl text-light pl-[20px]'>
           
-          <motion.h1 
-              variants={textAnimation}
-              initial="hidden"
-              animate={isEquipoInView ? "visible" : "hidden"}
-              transition={{ duration: 0.5 }}
+          <h1 
               className='mb-[50px] font-semibold text-lg '
             >
               Estamos a su disposición para asistirle con sus asuntos legales y contables.
-            </motion.h1>
-            <motion.div
-              variants={textAnimation}
-              initial="hidden"
-              animate={isEquipoInView ? "visible" : "hidden"}
-              transition={{ duration: 1 }}
-              
-            >
+            </h1>
+            
           <Link href="/contacto">
           <button
       style={{
@@ -168,7 +158,7 @@ export default function Home() {
       </svg>
     </button>
     </Link>
-    </motion.div>
+    
     </div>
     
     </section>{/*div 1*/}

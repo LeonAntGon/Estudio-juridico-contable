@@ -7,7 +7,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PhoneIcon, MailIcon, MapPinIcon, SendIcon } from "lucide-react"
 import { motion } from "framer-motion"
-import CoolSocials from '@/components/snippets/CoolSocials'
 
 export default function Contacto() {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false) // Added type annotation
@@ -120,16 +119,7 @@ export default function Contacto() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mb-12"
         >
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl text-center">Siguenos en redes sociales</CardTitle>
-            </CardHeader>
-            
-                <div className="flex h-[200px] justify-center">
-                  <CoolSocials/>
-                </div>
-              
-            </Card>
+          
           </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
