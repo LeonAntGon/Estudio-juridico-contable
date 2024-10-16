@@ -1,6 +1,5 @@
 "use client"
 import { useState, useRef } from 'react'
-import Wsp from '@/components/Wsp';
 import statue from '@/public/assets/statue.jpg';
 import TeamCarousel from '@/components/snippets/TeamCarousel';
 import { motion, useInView } from 'framer-motion'
