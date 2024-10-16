@@ -112,15 +112,15 @@ export default function Home() {
         <div className="w-full md:w-3/5 shadow-md"> {/* Added shadow-md here */}
 
         <section className="block h-[340px] bg-cover bg-center shadow-lg w-full" style={{ backgroundImage: `url(${statue.src})` }}>
-           <div className='pt-[40px] max-w-[350px] font-bold text-xl text-light pl-[20px]'>
+           <div className='pt-[40px] max-w-[350px] font-bold text-xl text-light pl-[25px]'>
           
           <h1 
-              className='mb-[50px] font-semibold text-lg '
+              className=' font-semibold text-lg mb-[100px]'
             >
-              Estamos a su disposición para asistirle con sus asuntos legales y contables.
+              Estamos a su disposición para <br></br>asistirle con sus asuntos<br></br> legales y contables.
             </h1>
             
-          <Link href="/contacto">
+          <Link href="/contacto" className='pl-[25px]'>
           <button
       style={{
         ...buttonStyles,
