@@ -115,7 +115,7 @@ export default function Home() {
            <div className='pt-[40px] max-w-[350px] font-bold text-xl text-light pl-[25px]'>
           
           <h1 
-              className=' font-semibold text-lg mb-[100px]'
+              className=' font-semibold text-lg mb-[70px]'
             >
               Estamos a su disposición para <br></br>asistirle con sus asuntos<br></br> legales y contables.
             </h1>
