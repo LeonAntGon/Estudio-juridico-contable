@@ -342,7 +342,7 @@ export default function Home() {
                   <h3 className="font-semibold mb-2">Síguenos en redes sociales</h3>
                   <div className="flex space-x-4">
                     <motion.a
-                      href="https://www.tiktok.com/@estudiojuridicocontable"
+                      href="https://www.tiktok.com/@abogadaclaudiavieyra"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
@@ -352,7 +352,7 @@ export default function Home() {
                       <FaTiktok size={20} />
                     </motion.a>
                     <motion.a
-                      href="https://www.facebook.com/estudiojuridicocontable"
+                      href="https://www.facebook.com/profile.php?id=61565158322290&mibextid=ZbWKwL"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
@@ -362,7 +362,7 @@ export default function Home() {
                       <FaFacebookF size={20} />
                     </motion.a>
                     <motion.a
-                      href="https://www.instagram.com/estudiojuridicocontable"
+                      href="https://www.instagram.com/draclaudiavieyra/"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
