@@ -30,11 +30,11 @@ const BlogLandingPage: React.FC = () => {
     </time>
   </div>
 
-  <div className="hidden sm:block sm:basis-56 min-w-[100px] max-w-300px">
+  <div className="block basis-56 min-w-[60px] max-w-300px pr-1 sm">
     <Image
       alt=""
       src={Book}
-      className="aspect-square h-full w-full object-cover min-w-[100px] max-w-300px"
+      className="aspect-square h-full w-full object-cover min-w-[60px] max-w-300px"
      
     />
   </div>
@@ -55,7 +55,7 @@ const BlogLandingPage: React.FC = () => {
       </p>
     </div>
 
-    <div className="sm:flex sm:items-end sm:justify-end">
+    <div className="flex items-end justify-end">
       <a
         href="#"
         className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
